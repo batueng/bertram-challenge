@@ -98,11 +98,15 @@ clear()
 i = 1
 done = False
 total = 0
+drink = None
 while not done:
     clear()
     print(f'Day {i}')
     print_coworkers_with_spent(workers)
     time.sleep(3)
+    choice = input("Do you want to exit [y/N]: ")
+    if choice == "y":
+        exit(0)
     clear()
     print_drinks(drinks)
 
@@ -112,7 +116,7 @@ while not done:
             total += drinks["Cappucino"]
         else:
             if key == "Jeremy":
-                print("Jeremy likes his coffee black. I know he would like the espresso or an americano.\n")
+                print("Jeremy likes his coffee black. I know he would like the espresso or the americano.\n")
             print(f"What will {key} pick?\n")
             correct = False
 
@@ -124,8 +128,8 @@ while not done:
                 except:
                     print("Wrong input, try again!")
     
-    print(f'\n{key} gets the {drink}.\n')
-    total += drinks[drink]
+            print(f'\n{key} gets the {drink}.\n')
+            total += drinks[drink]
     who_pays = find_key_with_min(workers)
     print(f'{who_pays} pays the bill of {total}')
     time.sleep(3)
