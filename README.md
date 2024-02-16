@@ -18,5 +18,5 @@ Drink choices for each coworker is inputted as an int only.
 
 ## Assumptions
 
-Bob always gets a cappucino
-The coworker who has paid a minimum total amount, pays next to ensure fairness
+Bob always gets a cappucino.
+The coworker who has paid a minimum total amount, pays next to ensure fairness.
